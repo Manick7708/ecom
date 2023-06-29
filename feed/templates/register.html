@@ -1,0 +1,57 @@
+
+{% extends "layouts/main.html" %} 
+{% block content %}
+    <div class="container" style="margin-top:70px;">
+        <h1>register</h1>
+        <div class="row">
+            <div class="col-12">
+                <h1>register</h1>
+                
+            </div>
+        </div>
+        
+        <section class="py-4 my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <form method="post" action="/feed/login/">
+                            {% csrf_token %}
+                            <div class="mb-4">
+                                <label for="" class="fore-lable">User Name</label>
+                                {{forms.username}}
+                                <label class="text-danger">{{ forms.errors.username }}</label>
+                                
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="" class="fore-lable">Email</label>
+                                {{forms.email}}
+                                <label class="text-danger">{{ forms.errors.email }}</label>
+                                
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="" class="fore-lable">password</label>
+                                {{forms.Password1}}
+                                <label class="text-danger">{{ forms.errors.password }}</label>
+                                
+                                
+                
+                            </div>
+                            <div class="mb-4">
+                                <label for="" class="fore-lable">Password Confirmation</label>
+                                {{forms.Password2}}
+                                <label class="text-danger">{{ forms.errors.password }}</label>
+                                
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form> 
+                        <p class="my-2">Already user ? <a href="{% url 'login' %}">Logion Now</a> </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </div>
+{% endblock content %}

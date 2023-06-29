@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %} 
+{% block content %}
+    <div class="container" style="margin-top:70px;">
+        
+        <div class="row">
+            <div class="col-12">
+                <h1>User Logion</h1>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label for="" class="fore-lable">User Name</label>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Enter User Name">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="" class="fore-lable">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
+                    
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <input type="submit" value="Login">
+            </div>
+        </div>
+    </form>
+        <section class="py-4 my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        
+
+        
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </div>
+{% endblock content %}
